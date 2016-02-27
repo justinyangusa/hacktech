@@ -11,11 +11,7 @@
 #import <Foundation/Foundation.h>
 @import Foundation;
 
-@interface mainViewController : UIViewController; NSURLConnection
-{
-    NSURLConnection *currentConnection;
-}
+@interface mainViewController : UIViewController 
 
-- (IBAction)verifyEmail:(id)sender;
 @property (retain, nonatomic) NSMutableData *apiReturnXMLData;
 @end
