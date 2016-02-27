@@ -4,22 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-hacktech.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-hacktechTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-hacktechUITests.xcscheme</key>
+		<key>Pods-hacktechtests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04283F9DF73B7B2EC13B1E0774263848</key>
+		<key>2EF226903F7F2B069170623D501472BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B9FE3103B578C41F58A2E676C71369A</key>
+		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C06900910C3A6326D437273407CBB0AC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4AF91FCD1860BC1C8EF9ECCC52FA1AE</key>
+		<key>E56B423EBE02D18D2CD6BA9BDCDA78E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

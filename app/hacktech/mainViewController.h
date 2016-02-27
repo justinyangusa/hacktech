@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
+
 @import Foundation;
 
-@interface mainViewController : UIViewController 
+@interface mainViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (retain, nonatomic) NSMutableData *apiReturnXMLData;
 @end

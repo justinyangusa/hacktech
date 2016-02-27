@@ -7,11 +7,18 @@
 //
 
 #import "mainViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface mainViewController ()
 
 @end
 
+@implementation MyLocationViewController : NSObject  {
+    CLLocationManager *locationManager;
+}
+
+@end
 @implementation mainViewController
 - (IBAction)logOut:(id)sender {
     Firebase *ref = [[Firebase alloc] initWithUrl:@"https://postmatesthing.firebaseio.com"];
@@ -21,6 +28,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+}
+
+
+
+- (NSString *) getDataFrom:(NSString *)url{
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"POST"];
+
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    NSString *pickupname;
+    NSString *pickupAddress;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    [request setURL:[NSURL URLWithString:@"/v1/customers/:customer_id/deliveries"]];
+    NSString * postUrl = [NSString stringWithFormat:@"pickup_address=%@&dropoff_address=%@", pickupname, pickupAddress];
+    [request setHTTPBody:[postUrl dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+//    NSString *postString = [NSString stringWithFormat:@"pickup_name=%@&pickup_address=%@",pickupname,pickupAddress ];
+
+    return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
+    
+    
+    [request setHTTPBody:[postUrl dataUsingEncoding:NSUTF8StringEncoding]];
+    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request
+                                                                 delegate:self];
+    NSLog(@"%@",connection);
+    
 }
 
 - (void)didReceiveMemoryWarning {

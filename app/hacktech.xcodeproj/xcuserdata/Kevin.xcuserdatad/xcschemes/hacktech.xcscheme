@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0AA7D8181C81897F00C2C46F"
-               BuildableName = "hacktech.app"
-               BlueprintName = "hacktech"
+               BuildableName = "hacktechtests.app"
+               BlueprintName = "hacktechtests"
                ReferencedContainer = "container:hacktech.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AA7D8181C81897F00C2C46F"
-            BuildableName = "hacktech.app"
-            BlueprintName = "hacktech"
+            BuildableName = "hacktechtests.app"
+            BlueprintName = "hacktechtests"
             ReferencedContainer = "container:hacktech.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AA7D8181C81897F00C2C46F"
-            BuildableName = "hacktech.app"
-            BlueprintName = "hacktech"
+            BuildableName = "hacktechtests.app"
+            BlueprintName = "hacktechtests"
             ReferencedContainer = "container:hacktech.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AA7D8181C81897F00C2C46F"
-            BuildableName = "hacktech.app"
-            BlueprintName = "hacktech"
+            BuildableName = "hacktechtests.app"
+            BlueprintName = "hacktechtests"
             ReferencedContainer = "container:hacktech.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

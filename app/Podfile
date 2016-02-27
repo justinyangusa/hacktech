@@ -4,18 +4,12 @@
 # use_frameworks!
 pod 'Firebase', '>= 2.5.0'
 pod 'TwilioSDK', '~>1.2'
+pod 'AFNetworking', '~> 2.0'
 
 
-
-target 'hacktech' do
-
-end
-
-target 'hacktechTests' do
+target 'hacktechtests' do
 
 end
 
-target 'hacktechUITests' do
 
-end
 
