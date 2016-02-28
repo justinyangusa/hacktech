@@ -35,22 +35,39 @@ int x,y,z;
         [ref observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
 //            NSLog(@"%@", snapshot.value);
             NSLog(@"%@", snapshot.value);
-
+//            NSLog(@"%@", snapshot.value[@"email"]);
 //            NSLog(@"stuff = %@  %@", snapshot.key, snapshot.value[@"email"]);
 //            NSLog(@"more stuff = %@  %@", snapshot.key, snapshot.value[@"password"]);
+            NSLog(@"same at %@", [snapshot.value class]);
+            NSLog(@"%@", snapshot.value[0]);
 
-            NSString *email = [NSString stringWithFormat:@"%@", snapshot.value[@"Email"]];
-            NSString *password = [NSString stringWithFormat:@"%@", snapshot.value[@"Password"]];
-
+//            NSLog(@"Awedcawedc %@", [snapshot.value 0]);
+            NSString *email = [NSString stringWithFormat:@"%@", snapshot.value[0][@"Email"]];
+            
+            NSString *password = [NSString stringWithFormat:@"%@", snapshot.value[0][@"Password"]];
+            
+            NSString *emailtext = [emailTextField text];
+            NSString *passwordtext = [passwordTextField text];
+            
         //         NSString *passwords = snapshot.value[@"password"];
+            NSLog(@"a %@",emailtext);
+            NSLog(@"b %@",passwordtext);
+            NSLog(@"c %@", email);
+            NSLog(@"d %@", password);
 
-            if(emailTextField.text == email && passwordTextField.text == password){
+            if([email isEqualToString: emailtext] && [password isEqualToString: passwordtext]) {
                 [self performSegueWithIdentifier:@"loginSuccess" sender:self];
             }
             else{
+//                NSLog(@"a %@",emailtext);
+//                NSLog(@"b %@",passwordtext);
+//                NSLog(@"c %@", email);
+//                NSLog(@"d %@", password);
+
                 x=1;
                 [self alert];
             }
+            
         } withCancelBlock:^(NSError *error) {
             NSLog(@"%@", error.description);
         }];
