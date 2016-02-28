@@ -17,7 +17,7 @@
 @end
 
 @implementation loginViewController
-@synthesize ref;
+//@synthesize ref;
 int x,y,z;
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -28,40 +28,69 @@ int x,y,z;
 
 - (IBAction)login:(id)sender {
     [super viewDidLoad];
-    NSString *username = emailTextField.text;
-    NSString *password = passwordTextField.text;
+    NSLog(@"same");
+    Firebase *ref = [[Firebase alloc] initWithUrl: @"https://postmatesthing.firebaseio.com"];
+    // Attach a block to read the data at our posts reference
+
+        [ref observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+//            NSLog(@"%@", snapshot.value);
+            NSLog(@"%@", snapshot.value);
+
+//            NSLog(@"stuff = %@  %@", snapshot.key, snapshot.value[@"email"]);
+//            NSLog(@"more stuff = %@  %@", snapshot.key, snapshot.value[@"password"]);
+
+            NSString *email = [NSString stringWithFormat:@"%@", snapshot.value[@"Email"]];
+            NSString *password = [NSString stringWithFormat:@"%@", snapshot.value[@"Password"]];
+
+        //         NSString *passwords = snapshot.value[@"password"];
+
+            if(emailTextField.text == email && passwordTextField.text == password){
+                [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+            }
+            else{
+                x=1;
+                [self alert];
+            }
+        } withCancelBlock:^(NSError *error) {
+            NSLog(@"%@", error.description);
+        }];
+
     
-    [ref authUser:username password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
-    if (error) {
-        // There was an error logging in to this account
-        switch(error.code) {
-            case FAuthenticationErrorUserDoesNotExist:
-                NSLog(@"make an account");
-                // Handle invalid user
-                x = 0;
-                [self alert];
-                break;
-            case FAuthenticationErrorInvalidEmail:
-                // Handle invalid email
-                NSLog(@"the email doesnt exist");
-                x = 1;
-                [self alert];
-
-                break;
-            case FAuthenticationErrorInvalidPassword:
-                // Handle invalid password
-                NSLog(@"stahp hacking");
-                x = 2;
-                [self alert];
-                break;
-            default:
-                break;
-        }} else {
-        [self performSegueWithIdentifier:@"loginSuccess" sender:self];
-
-        // We are now logged in
-    }
-}];
+//    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://postmatesthing.firebaseio.com/accounts"];
+         //    NSString *username = emailTextField.text;
+//    NSString *password = passwordTextField.text;
+//    
+//    [ref authUser:username password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
+//    if (error) {
+//        // There was an error logging in to this account
+//        switch(error.code) {
+//            case FAuthenticationErrorUserDoesNotExist:
+//                NSLog(@"make an account");
+//                // Handle invalid user
+//                x = 0;
+//                [self alert];
+//                break;
+//            case FAuthenticationErrorInvalidEmail:
+//                // Handle invalid email
+//                NSLog(@"the email doesnt exist");
+//                x = 1;
+//                [self alert];
+//
+//                break;
+//            case FAuthenticationErrorInvalidPassword:
+//                // Handle invalid password
+//                NSLog(@"stahp hacking");
+//                x = 2;
+//                [self alert];
+//                break;
+//            default:
+//                break;
+//        }} else {
+//        [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+//
+//        // We are now logged in
+//    }
+//}];
     
 
 }

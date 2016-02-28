@@ -26,63 +26,64 @@
 @synthesize email;
 
 - (IBAction)registerAction:(id)sender {
-    if(emailTextField.text != nil && passwordTextField.text != nil){
-        Firebase *ref = [[Firebase alloc] initWithUrl:@"https://postmatesthing.firebaseio.com"];
-        [ref createUser:emailTextField.text password:passwordTextField.text
-withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
-        if (error) {
-        // There was an error creating the account
-        } else {
-            
-            [[[[Firebase alloc] initWithUrl:@"https://postmatesthing"] childByAppendingPath:@"Name"] setValue:[NSNumber numberWithInt:Number]];
-            [[[[Firebase alloc] initWithUrl:@"https://postmatesthing"] childByAppendingPath:@"Name"] setValue:[NSNumber numberWithInt:Name]];
-
-
-            Name = nameTextField.text;
-            password = passwordTextField.text;
-            email = emailTextField.text;
-            Number = phoneTextField.text;
-            
-            NSString *uid = [result objectForKey:@"uid"];
-            NSLog(@"Successfully created user account with uid: %@", uid);
-            [self performSegueWithIdentifier:@"registerSuccess" sender:self];
-
-            }
-        }];
-        
-        [ref authUser:emailTextField.text password:passwordTextField.text
-withCompletionBlock:^(NSError *error, FAuthData *authData) {
-        if (error) {
-        // There was an error logging in to this account
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"enter a legit email"
-                                                                           message:@""
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                                  handler:^(UIAlertAction * action) {}];
-            
-            [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
-            NSLog(@" %@ ", error);
-        } else {
-        [self performSegueWithIdentifier:@"registerSuccess" sender:self];
-            
-        }
-        }];
-    }
-    else{
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"m8 fill it out"
-                                                                       message:@"empty field"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
     
-    }
+   
+    
+        
+        
+        //        if (error) {
+        //        // There was an error creating the account
+        //        } else {
+        //
+        //            [[[[Firebase alloc] initWithUrl:@"https://postmatesthing"] childByAppendingPath:@"Name"] setValue:[NSNumber numberWithInt:Number]];
+        //            [[[[Firebase alloc] initWithUrl:@"https://postmatesthing"] childByAppendingPath:@"Name"] setValue:[NSNumber numberWithInt:Name]];
+        //
+        //
+        //            Name = nameTextField.text;
+        //            password = passwordTextField.text;
+        //            email = emailTextField.text;
+        //            Number = phoneTextField.text;
+        //
+        //            NSString *uid = [result objectForKey:@"uid"];
+        //            NSLog(@"Successfully created user account with uid: %@", uid);
+        //            [self performSegueWithIdentifier:@"registerSuccess" sender:self];
+        //
+        //            }
+        //        }];
+        //
+        //        [ref authUser:emailTextField.text password:passwordTextField.text
+        //withCompletionBlock:^(NSError *error, FAuthData *authData) {
+        //        if (error) {
+        //        // There was an error logging in to this account
+        //            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"enter a legit email"
+        //                                                                           message:@""
+        //                                                                    preferredStyle:UIAlertControllerStyleAlert];
+        //
+        //            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+        //                                                                  handler:^(UIAlertAction * action) {}];
+        //
+        //            [alert addAction:defaultAction];
+        //            [self presentViewController:alert animated:YES completion:nil];
+        //            NSLog(@" %@ ", error);
+        //        } else {
+        //        [self performSegueWithIdentifier:@"registerSuccess" sender:self];
+        //
+        //        }
+        //        }];
+        //    }
+        //    else{
+        //        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"m8 fill it out"
+        //                                                                       message:@"empty field"
+        //                                                                preferredStyle:UIAlertControllerStyleAlert];
+        //
+        //        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+        //                                                              handler:^(UIAlertAction * action) {}];
+        //
+        //        [alert addAction:defaultAction];
+        //        [self presentViewController:alert animated:YES completion:nil];
+        //
 }
+
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
