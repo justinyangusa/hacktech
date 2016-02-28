@@ -1,0 +1,19 @@
+PODS:
+  - TwilioCommon (0.2.0)
+  - TwilioConversationsClient (0.21.6)
+
+DEPENDENCIES:
+  - TwilioCommon (from `https://media.twiliocdn.com/sdk/ios/common/latest/TwilioCommon.podspec`)
+  - TwilioConversationsClient (from `https://media.twiliocdn.com/sdk/ios/conversations/latest/TwilioConversationsClient.podspec`)
+
+EXTERNAL SOURCES:
+  TwilioCommon:
+    :podspec: https://media.twiliocdn.com/sdk/ios/common/latest/TwilioCommon.podspec
+  TwilioConversationsClient:
+    :podspec: https://media.twiliocdn.com/sdk/ios/conversations/latest/TwilioConversationsClient.podspec
+
+SPEC CHECKSUMS:
+  TwilioCommon: 4df02bca5da0e5784cbbeac655e71d203f7c0d2c
+  TwilioConversationsClient: 5235fbaaf7b2508bc46d18d1b73f87642f80ad81
+
+COCOAPODS: 0.39.0
