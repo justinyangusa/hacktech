@@ -241,12 +241,34 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-HS-g4b">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WVs-zD-qtJ">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WVs-zD-qtJ" id="XiJ-49-qa2">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZQW-P7-PFS" id="ug4-PP-iwB"/>
+                                    <outlet property="delegate" destination="ZQW-P7-PFS" id="0zb-4Y-2cM"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fHw-4F-kQI" firstAttribute="leading" secondItem="SN9-dG-IBk" secondAttribute="leading" id="LhO-xG-tgf"/>
+                            <constraint firstAttribute="trailing" secondItem="lWB-HS-g4b" secondAttribute="trailing" id="SEm-qF-0uz"/>
+                            <constraint firstItem="lWB-HS-g4b" firstAttribute="top" secondItem="fHw-4F-kQI" secondAttribute="bottom" id="flH-HU-Lyj"/>
                             <constraint firstAttribute="trailing" secondItem="fHw-4F-kQI" secondAttribute="trailing" id="iAQ-wg-kIZ"/>
                             <constraint firstItem="fHw-4F-kQI" firstAttribute="top" secondItem="SN9-dG-IBk" secondAttribute="top" constant="16" id="nRc-Qb-Eiy"/>
+                            <constraint firstItem="ezU-OJ-gaJ" firstAttribute="top" secondItem="lWB-HS-g4b" secondAttribute="bottom" id="puJ-mP-xZ3"/>
+                            <constraint firstItem="lWB-HS-g4b" firstAttribute="leading" secondItem="SN9-dG-IBk" secondAttribute="leading" id="qgm-IC-wxQ"/>
                         </constraints>
                     </view>
                 </viewController>
