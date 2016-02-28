@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 
-@interface loginViewController : UIViewController
-@property(nonatomic) Firebase *ref;
 
+@interface loginViewController : UIViewController <UITextFieldDelegate>
+@property(nonatomic) Firebase *ref; 
 @end

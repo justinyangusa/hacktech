@@ -19,14 +19,19 @@
 @implementation loginViewController
 @synthesize ref;
 int x,y,z;
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)login:(id)sender {
     [super viewDidLoad];
-    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://postmatesthing.firebaseio.com"];
     NSString *username = emailTextField.text;
     NSString *password = passwordTextField.text;
     
-    [ref authUser:username password:password
-withCompletionBlock:^(NSError *error, FAuthData *authData) {
+    [ref authUser:username password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
     if (error) {
         // There was an error logging in to this account
         switch(error.code) {
@@ -84,6 +89,8 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
 }
 
 - (void)viewDidLoad {
+    [emailTextField resignFirstResponder];
+    [passwordTextField resignFirstResponder];
     
     // Do any additional setup after loading the view.
 }

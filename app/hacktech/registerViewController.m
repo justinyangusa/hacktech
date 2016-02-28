@@ -84,8 +84,21 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
     }
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [passwordTextField setDelegate:self];
+    [emailTextField setDelegate:self];
+    [nameTextField setDelegate:self];
+    [phoneTextField setDelegate:self];
+
+
     // Do any additional setup after loading the view.
     Firebase *ref = [[Firebase alloc] initWithUrl:@"https://postmatesthing.firebaseio.com"];
     [ref createUser:emailTextField.text password:passwordTextField.text

@@ -19,6 +19,7 @@
 		0ABB97D31C82075D00B49472 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABB97D21C82075D00B49472 /* CoreLocation.framework */; };
 		0ABB97D51C82159500B49472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABB97D41C82159500B49472 /* Foundation.framework */; };
 		0ABB97D71C82418A00B49472 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABB97D61C82418A00B49472 /* AVFoundation.framework */; };
+		0ABB97DA1C8277FD00B49472 /* priceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB97D91C8277FD00B49472 /* priceViewController.m */; };
 		E637819D63727B8D65EEAD85 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14B704BC32FC2808A596EF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		0ABB97D21C82075D00B49472 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0ABB97D41C82159500B49472 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0ABB97D61C82418A00B49472 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0ABB97D81C8277FD00B49472 /* priceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = priceViewController.h; sourceTree = "<group>"; };
+		0ABB97D91C8277FD00B49472 /* priceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = priceViewController.m; sourceTree = "<group>"; };
 		2272BA28A72B987FAD1D71B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E14B704BC32FC2808A596EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF72E54C9FE478B6D5BC220 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				0AA7D8251C81897F00C2C46F /* Main.storyboard */,
 				0ABB97CD1C81A8D800B49472 /* landingViewController.h */,
 				0ABB97CE1C81A8D800B49472 /* landingViewController.m */,
+				0ABB97D81C8277FD00B49472 /* priceViewController.h */,
+				0ABB97D91C8277FD00B49472 /* priceViewController.m */,
 				0ABB97CA1C81A7BC00B49472 /* mainViewController.h */,
 				0ABB97CB1C81A7BC00B49472 /* mainViewController.m */,
 				0ABB97C71C81A49100B49472 /* loginViewController.h */,
@@ -264,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABB97CF1C81A8D800B49472 /* landingViewController.m in Sources */,
+				0ABB97DA1C8277FD00B49472 /* priceViewController.m in Sources */,
 				0ABB97C91C81A49100B49472 /* loginViewController.m in Sources */,
 				0AA7D8211C81897F00C2C46F /* AppDelegate.m in Sources */,
 				0ABB97CC1C81A7BC00B49472 /* mainViewController.m in Sources */,
