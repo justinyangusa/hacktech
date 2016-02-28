@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bHu-3s-FGW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bHu-3s-FGW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -144,7 +144,7 @@
         <!--Table View Controller-->
         <scene sceneID="Q9t-0z-BrP">
             <objects>
-                <tableViewController id="yyS-in-sW6" sceneMemberID="viewController">
+                <tableViewController id="yyS-in-sW6" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cA-vq-lcu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +180,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pKa-Ir-7Ts" id="XgX-zx-8ez">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJW-0j-oqn">
+                                                    <rect key="frame" x="267" y="5" width="80" height="30"/>
+                                                    <state key="normal" title="Select Event"/>
+                                                    <connections>
+                                                        <action selector="SelectEvent:" destination="yyS-in-sW6" eventType="touchUpInside" id="9Gf-bm-S4N"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cJW-0j-oqn" firstAttribute="centerX" secondItem="XgX-zx-8ez" secondAttribute="centerX" id="l9D-7X-h68"/>
+                                                <constraint firstItem="cJW-0j-oqn" firstAttribute="centerY" secondItem="XgX-zx-8ez" secondAttribute="centerY" id="rBk-p4-EHF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IK3-0Z-AeK">
@@ -188,6 +201,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IK3-0Z-AeK" id="PsE-EG-5JV">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tJ-jn-Qgq">
+                                                    <rect key="frame" x="279" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2tJ-jn-Qgq" firstAttribute="centerX" secondItem="PsE-EG-5JV" secondAttribute="centerX" id="7Qt-Iv-CAd"/>
+                                                <constraint firstItem="2tJ-jn-Qgq" firstAttribute="centerY" secondItem="PsE-EG-5JV" secondAttribute="centerY" id="GTZ-EG-XGd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="K9b-bo-ohq">
@@ -206,6 +231,9 @@
                             <outlet property="delegate" destination="yyS-in-sW6" id="LiB-7B-sZw"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="status" destination="2tJ-jn-Qgq" id="SZ4-Gp-uus"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7E-Qa-P4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -429,7 +457,7 @@
         <image name="postmatesicon" width="87" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m0Y-1V-bcG"/>
         <segue reference="K7S-sM-sSC"/>
+        <segue reference="m0Y-1V-bcG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,11 +10,11 @@
 
 @interface registerViewController (){
     
-    __weak IBOutlet UITextField *passwordTextField;
-    __weak IBOutlet UITextField *emailTextField;
+    __strong IBOutlet UITextField *passwordTextField;
+    __strong IBOutlet UITextField *emailTextField;
     
-    __weak IBOutlet UITextField *nameTextField;
-    __weak IBOutlet UITextField *phoneTextField;
+    __strong IBOutlet UITextField *nameTextField;
+    __strong IBOutlet UITextField *phoneTextField;
 }
 
 @end
@@ -93,7 +93,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+/*
     [passwordTextField setDelegate:self];
     [emailTextField setDelegate:self];
     [nameTextField setDelegate:self];
@@ -121,7 +121,7 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
         // We are now logged in
     }
 }];
-
+*/
 }
 
 

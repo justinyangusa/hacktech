@@ -16,7 +16,6 @@
 		80250F3B13B2A88A009B4E18 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80250F3A13B2A88A009B4E18 /* SystemConfiguration.framework */; };
 		804E507E14D23CEA0040A80E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804E507D14D23CEA0040A80E /* AVFoundation.framework */; };
 		8F956FF71AF8248E0045C16C /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF61AF8248E0045C16C /* ConversationViewController.m */; };
-		AFD13EC3F179AA6E9761FD9A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FAEF3EC0B18F02A39FE8BD /* libPods.a */; };
 		CC2584071C82CD2D007442E9 /* TwilioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2584061C82CD2D007442E9 /* TwilioCommon.framework */; };
 		CC2584091C82CD49007442E9 /* TwilioConversationsClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2584081C82CD49007442E9 /* TwilioConversationsClient.framework */; };
 		CEF910E51A8BA79A00908DE7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF910E41A8BA79A00908DE7 /* VideoToolbox.framework */; };
@@ -42,10 +41,8 @@
 		1D6058910D05DD3D006BFB54 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		41D732CBCF68E060A233600C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5824322B1AD729F900B261D7 /* CreateConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CreateConversationViewController.h; path = Modules/CreateConversationViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5824322C1AD729F900B261D7 /* CreateConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CreateConversationViewController.m; path = Modules/CreateConversationViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5A696205EC373BA943C5A56E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		80250E4213B178C4009B4E18 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		80250E4613B178C9009B4E18 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		80250F3A13B2A88A009B4E18 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -55,7 +52,6 @@
 		CC2584061C82CD2D007442E9 /* TwilioCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwilioCommon.framework; path = "../twilio-common-ios/TwilioCommon.framework"; sourceTree = "<group>"; };
 		CC2584081C82CD49007442E9 /* TwilioConversationsClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwilioConversationsClient.framework; path = "../twilio-conversations-ios/TwilioConversationsClient.framework"; sourceTree = "<group>"; };
 		CEF910E41A8BA79A00908DE7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		D1FAEF3EC0B18F02A39FE8BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E106729C1A2DA0FC00241589 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		E106729E1A2DA10B00241589 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E10672A01A2DA12400241589 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -102,7 +98,6 @@
 				80250E4313B178C4009B4E18 /* AudioToolbox.framework in Frameworks */,
 				80250E4713B178C9009B4E18 /* CFNetwork.framework in Frameworks */,
 				80250F3B13B2A88A009B4E18 /* SystemConfiguration.framework in Frameworks */,
-				AFD13EC3F179AA6E9761FD9A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +107,6 @@
 		17BA0282A65A713364152873 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5A696205EC373BA943C5A56E /* Pods.debug.xcconfig */,
-				41D732CBCF68E060A233600C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -173,7 +166,6 @@
 				80250E4613B178C9009B4E18 /* CFNetwork.framework */,
 				80250F3A13B2A88A009B4E18 /* SystemConfiguration.framework */,
 				804E507D14D23CEA0040A80E /* AVFoundation.framework */,
-				D1FAEF3EC0B18F02A39FE8BD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,7 +351,6 @@
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A696205EC373BA943C5A56E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -393,7 +384,6 @@
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41D732CBCF68E060A233600C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
